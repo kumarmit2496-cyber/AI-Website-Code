@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn,
+button,
+a[href^="tel:"],
+a[href^="mailto:"],
+a[href*="wa.me"] {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, filter 0.18s ease;
+  will-change: transform;
+}
+
+.btn:hover,
+button:hover,
+a[href^="tel:"]:hover,
+a[href^="mailto:"]:hover,
+a[href*="wa.me"]:hover {
+  animation: button-pop 0.32s ease both;
+  filter: brightness(1.08);
+}
+
+@keyframes button-pop {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  40% {
+    transform: translateY(-3px) scale(1.035);
+  }
+
+  70% {
+    transform: translateY(-2px) scale(0.995);
+  }
+
+  100% {
+    transform: translateY(-2px) scale(1.015);
+  }
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(0, 201, 167, 0.65) !important;
+  box-shadow: 0 0 0 0.25rem rgba(0, 201, 167, 0.16) !important;
+  color: #fff !important;
+}
