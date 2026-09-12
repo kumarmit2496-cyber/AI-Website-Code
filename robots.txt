@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aiwithcoding.in/sitemap.xml
+Sitemap: https://aiwithcoding.netlify.app/sitemap.xml
